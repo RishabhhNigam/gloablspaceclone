@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalSpace Technology</title>
+     <link rel="icon" type="image/x-icon" href="Assets/favicon (1).ico">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <!-- <div>
+       <img class="color-logo" src="Assets/gst-color-logo.png" alt="GST Logo">
+        </div> -->
+        <div class="hamburger"  >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+        <nav class="nav" id="mobile-nav">
+            <div class="logo-wrapper">
+       <img class="color-logo" src="Assets/gst-color-logo.png" alt="GST Logo">
+        </div>
+            <ul class="nav-links">
+                <li><a href="#aboutus">About Us</a>  
+                     <ul class="dropdown dropdown-content">
+                        <li><a href="#">Board of Directors</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Management</a></li>
+                        <li><a href="#">Organization</a></li>
+                        <li><a href="#">Partners</a></li>
+                     </ul> </li>
+                <li><a href="#pharma">Pharma</a></li>
+                <li><a href="#doctor">Doctor</a></li>
+                <li><a href="#patient">Patient</a></li>
+                <li><a href="#pharmacy">Pharmacy</a></li>
+                <li><a href="#patient">Digital Therapeutics</a></li>
+            </ul>
+            <div class="nav-button">
+            <button id="first-button">Schedule a Demo </button>
+        </div>
+        </nav>
+        <!-- <div class="nav-button">
+            <button id="first-button">Schedule a Demo </button>
+        </div> -->
+    </header>
+    <section class="first-section">
+        <div class="overlay"></div>
+        <div class="content" >
+               <h2>How do we Build Value</h2>
+            <p>Leveraging  industry knowledge, business processes and <br>
+            technological expertise to create innovative solutions that<br>
+            revolutionize client's business practices.
+         </p> 
+        </div>
+    </section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+    <section class="section"></section>
+     <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.getElementById('mobile-nav');
+
+
+    function toggleMenu() {
+    nav.classList.toggle('show');
+    hamburger.classList.toggle('active');
+  }
+     hamburger.addEventListener('click', toggleMenu);
+         
+     
+  </script>
+</body>
+</html>
