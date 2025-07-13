@@ -1,10 +1,14 @@
 
 *{
     color: azure;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html , body{
-    overflow: hidden;
+    overflow-x: hidden;
     max-width: 100vw;
+    
 }
 body {
     margin: 0;
@@ -21,7 +25,9 @@ body {
     max-width: 100%;
     max-height: 100%;
     overflow-x:hidden; 
+    overflow-y: auto;
     padding-top: 4.375rem;
+    
 }
 
 header{
@@ -31,16 +37,26 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4.375rem;
+    height: 3.75rem;
     width: 100%;
     background: black;
     flex-wrap: wrap;
     max-width: 100%;
-    z-index: 1000;
+    z-index: 9999;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    bottom: unset;
+}
+
+.mob-logo{
+    display: none;
+     width: 180px;
+  height: 60px;
+  background: url("Assets/gst-color-logo.png") no-repeat center center;
+  background-size: contain;     /* ✅ Scales image to fit */
+  margin-left: 1rem;
 }
  .color-logo {
   width: 15.625rem;     
@@ -49,13 +65,14 @@ header{
   object-fit: contain;
   max-width: 100%;
     margin: 10 auto;
-    margin-top: 1.125rem;
- 
+    margin-top: -0rem;
+     
 }
 .nav{
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
      right: 05rem;
      bottom: 0.625rem;
@@ -69,14 +86,14 @@ header{
 }
 .nav li a{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: bolder;
     padding: 0%;
 }
 .nav-links{
     list-style: none;
     display: flex;
-    gap: 3rem ;
+    gap: 2rem ;
     margin: 0;
     padding: 20;
     position: relative;
@@ -85,16 +102,16 @@ header{
 .dropdown-content{
     display: none;
     position: absolute;
-    top: 100%;
+    
     margin-top: 0.625rem;
     list-style: none;
-    padding:1rem ;
+    padding: 0.2rem 1.5rem ;
     background-color: #fefefe;
     color: black;
-    width: 12.5rem;
+    width: 14.375rem;
     height: 1.313.rem;
     border-radius: 0.635rem;
-     
+    letter-spacing: -0.01rem 
 
 }
  
@@ -119,13 +136,13 @@ header{
 
 
 #first-button{
-    height: 3.125rem;
+    height: 2.125rem;
     width: 10.375rem;
     align-self: end;
     background: linear-gradient(90deg,rgba(255, 119, 15, 1) 70%, rgba(255, 156, 69, 1) 88%);
-    font-size: 0.938rem;
-    font-weight: bolder;
-    border-radius: 0.625remx;
+    font-size: 0.900rem;
+    font-weight: bold;
+    border-radius: 0.625rem;
     border: 0.5px solid  #ff770f;
     margin-right: 1rem;
      margin-top: 10px;
@@ -163,6 +180,84 @@ header{
     transform: rotate(-45deg)translate(5px,-5px);
 }
 
+.first-section{
+    display:flex;
+    height: 90vh;
+    width: 100%;
+    min-height: 100vh;
+    background: url('Assets/pharma_banner (1).jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+  .first-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 128, 0.4); /* Blue overlay */
+      z-index: 1;
+    }
+
+ 
+
+
+ 
+.content{
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.content h2{
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-top: -10.5rem;
+    margin-bottom: 1rem;
+    margin-left: 10rem;
+}
+  .para{
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1.25rem;
+    max-width: 40rem;
+    text-align: center;
+    margin-top: 0rem;
+    margin-left: 10rem;
+    
+}  
+ 
+ /* second section starts her  */
+
+.second-section{
+    min-height: 100vh;
+    background: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    padding: 2rem;
+}
+.second.second-section .container{
+    text-align: center;
+}
+     .section {
+      min-height: 100vh;
+      padding: 2rem;
+      background: black;
+      color: white;
+    }
+
+
+
 
 /* @media Query Starts From Here  */
 
@@ -170,10 +265,10 @@ header{
     header{
         flex-wrap:wrap;
         justify-content: space-between;
-        background-image: url(Assets/gst-color-logo.png) ;
-        background-repeat: no-repeat;
-        background-position: start;
-        background-size: contain;
+        /* background-image: url(Assets/gst-color-logo.png) ,15rem 15rem; */
+        /* background-repeat: no-repeat;
+        background-position: start; */
+        
         width: 100%;
         height: 3.125rem;
         margin-right: 6.25rem;
@@ -182,7 +277,13 @@ header{
         padding: 1rem;
         height: auto;;
     }
-    
+    .mob-logo{
+        display: block;
+         width: 140px;
+         height: 40px;
+         margin: 0.5rem 1rem;
+  
+    }
 
     .color-logo{
         display: none;
@@ -195,7 +296,7 @@ header{
         margin-right: 1rem;
          
     }
-    .nav{
+    /* .nav{
         margin-left: 50rem;
         position: fixed;
         width: 53%;
@@ -207,8 +308,8 @@ header{
     justify-content: flex-start;
     align-items: flex-start;
     /* padding: 2rem 1rem; */
-    transform: translateX(100%); /* Initially hidden off-screen */
-    transition: transform 0.3s ease-in-out;
+    /* transform: translateX(100%); Initially hidden off-screen */
+    /* transition: transform 0.3s ease-in-out;
     z-index: 999;
     display: flex;
     left: 0;
@@ -228,9 +329,25 @@ header{
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
         z-index: 1000;
-  
-    }
+}
+   */
      
+      .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80vw;
+    max-width: 300px;
+    background-color: #2f353a;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
 
     .nav.show{
         display: flex;
@@ -282,15 +399,23 @@ header{
 
   }
 
-    .nav-button{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        border-radius: 0.625rem;
-        margin-left: -7.5rem;   
-        /* background: linear-gradient(90deg,rgba(255, 119, 15, 1) 70%, rgba(255, 156, 69, 1) 88%); */
-        
-    }
+     #first-button {
+    width: 90%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(255,119,15,1) 70%, rgba(255,156,69,1) 88%);
+    color: white;
+    box-shadow: 4px 5px 1px #ca5604;
+    text-align: center;
+    justify-self: center;
+  }
+
+  #first-button:hover {
+    box-shadow: none;
+    cursor: pointer;
+  }
    
      
 }
