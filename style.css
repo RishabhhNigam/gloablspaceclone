@@ -140,17 +140,17 @@ header{
 
 
 #first-button{
-    height: 2.125rem;
-    width: 10.375rem;
+    height: 2rem;
+    width: 8.375rem;
     align-self: end;
     background: linear-gradient(90deg,rgba(255, 119, 15, 1) 70%, rgba(255, 156, 69, 1) 88%);
-    font-size: 0.900rem;
-    font-weight: bold;
+    font-size: 0.800rem;
+   
     border-radius: 0.625rem;
-    border: 0.5px solid  #ff770f;
+    border:0.313rem solid  #ff770f;
     margin-right: 1rem;
-     margin-top: 10px;
-    box-shadow: 5px 6px 1px  #ff770f;
+     /* margin-top: 0.625rem; */
+    box-shadow: 0.313rem 0.375rem 0.063rem  #ff770f;
 }
 #first-button:hover{
      box-shadow:none;
@@ -192,13 +192,12 @@ header{
     display:flex;
     height: 90vh;
     width: 100%;
-    min-height: 100vh;
-    background: url('Assets/pharma_banner (1).jpg') no-repeat center center/cover;
+    background: url('Assets/pharma_banner (1).jpg') no-repeat center center/cover ;
+    box-sizing: border-box;
     position: relative;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
-     
-     
+     padding: 2.5rem 1.25rem ;
 }
 
   .first-section::before {
@@ -208,7 +207,7 @@ header{
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(118, 168, 224, 0.671); /* Blue overlay */
+      background-color: rgba(0, 0, 0, 0.671); /* Blue overlay */
       z-index: 1;
     }
 
@@ -334,6 +333,12 @@ header{
   background: linear-gradient(90deg, #ff9c45 70%, #ff770f 88%);
 }
 
+
+.second-section,
+.third-section,
+.fourth-section {
+  margin-bottom: 3rem;
+}
 /* Optional: Color difference for left and right */
 .contain.left {
   border-top-left-radius: 2rem;
@@ -353,9 +358,11 @@ header{
     background-size: contain;
     background-repeat: no-repeat;
     overflow: hidden;
+    box-sizing: border-box;
+    padding: 4rem 1rem;;
 }
 .third-section-first-div{
-    position: absolute;
+    position: relative;
     inset: 0;
     background: linear-gradient(to right, #0c8481, #8dc8725c);
     display: flex;
@@ -422,11 +429,9 @@ header{
 }
 .fourth-section-container img{
   flex: 1 1 40%;
-  display: flex;
+  display: block;
   justify-content: center;
   margin-right: 3rem ;
-}
-.fourth-section-img img {
   max-width: 100%;
   height: auto;
   
@@ -857,6 +862,13 @@ section:hover ul li{
     box-shadow: none;
     cursor: pointer;
   }
+    
+  .first-section{
+      height: 40vh; /* Let it shrink naturally */
+    padding: 3.75 0.938rem;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+  }
    
      
 
@@ -896,14 +908,34 @@ section:hover ul li{
     width: 95%;
   }
  
+/* fourth-section starts here */
+
 .fourth-section-container {
     flex-direction: column;
     text-align: center;
+    padding: 2rem 1rem;
   }
-
+    .fourth-section-title {
+    align-items: center;
+    padding-right: 0;
+  }
+  
+  .fourth-section-title h2,
+  .fourth-section-title h4,
+  .fourth-section-title .para {
+    text-align: center;
+  }
+  .para{
+    text-align: center;
+    margin: 0 0 ;
+  }
   .fourth-section-title,
   .fourth-section-img {
     flex: 1 1 100%;
+  }
+   
+    .fourth-section-container img {
+    margin-top:1rem;
   }
 
 /* sass section starts here */  
