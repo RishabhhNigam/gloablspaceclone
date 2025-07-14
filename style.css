@@ -433,6 +433,7 @@ header{
 }
 .fourth-section-container p{
     text-align: start;
+    
 }
 
 /* fifth section starts here */
@@ -444,27 +445,37 @@ header{
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
-    height: 100vh;  
-    opacity: calc(0.9);
+    height: 100vh; 
+    overflow: hidden;
 }
-
+.fifth-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);  
+  z-index: 1;
+}
 .fifth-section {
   position: relative;
-  /* background: url("Assets/bg-hospital.jpg") no-repeat center center/cover; */
   padding: 4rem 1rem;
   text-align: center;
   color: white;
 }
 
 .fifth-container-first {
-  background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
   padding: 2rem;
   backdrop-filter: blur(4px);
 }
-
-.overlay h2 {
+.transparent-container{
+    position: relative;
+  z-index: 2;  
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+ .fifth-container-first h3 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-weight: bold;
 }
 
@@ -479,7 +490,7 @@ header{
   background: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1.5rem;
-  width: 250px;
+  width: 300px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -500,6 +511,119 @@ header{
   font-size: 1rem;
   line-height: 1.4;
 }
+
+/* sass section starts here */
+.saas-section {
+  background: black;
+  padding: 2rem;
+  color: white;
+}
+
+.saas-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.saas-text {
+  flex: 1 1 50%;
+}
+
+.saas-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #00bfa6;
+}
+
+.saas-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.saas-text ul li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.5s ease;
+}
+
+.saas-section:hover .saas-text ul li {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* section {
+     transform: translateX(-50px);
+  transition: all 0.5s ease;
+}
+section:hover ul li{
+    opacity: 1;
+    transform: translateX(0); 
+} */
+
+.saas-img {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saas-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+ /* service sixth section starts here  */
+ .services-section {
+      background: linear-gradient(to right, #0f9b8e, #2c3e50);
+      color: #fff;
+      padding: 60px 20px 40px;
+      position: relative;
+      clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .services-section h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px 20px;
+      width: 300px;
+      text-align: center;
+      color: #cfd8dc;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card img {
+      width: 60px;
+      margin-bottom: 20px;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+
 
 
 
@@ -782,6 +906,21 @@ header{
     flex: 1 1 100%;
   }
 
+/* sass section starts here */  
+   .saas-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .saas-text, .saas-img {
+    flex: 1 1 100%;
+  }
+
+  .saas-img img {
+    max-width: 90%;
+  }
+
+
 /* footer section start here */
  .footer-divs {
     flex-direction: column;
@@ -810,6 +949,4 @@ header{
 
 }
 
-* {
-  outline: 1px solid rgba(255,0,0,0.2); /* ❗ see what element is overflowing */
-}
+ 
