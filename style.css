@@ -29,6 +29,9 @@ body {
     padding-top: 4.375rem;
     
 }
+a{
+    color: #fefefe;
+}
 
 header{
     background-color:gray;
@@ -37,7 +40,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3.75rem;
+    height: 3.875rem;
     width: 100%;
     background: black;
     flex-wrap: wrap;
@@ -77,6 +80,7 @@ header{
      right: 05rem;
      bottom: 0.625rem;
      z-index: 999;
+     margin-top: -0.5rem;
      
  
 }
@@ -180,6 +184,10 @@ header{
     transform: rotate(-45deg)translate(5px,-5px);
 }
 
+ 
+
+
+
 .first-section{
     display:flex;
     height: 90vh;
@@ -187,6 +195,10 @@ header{
     min-height: 100vh;
     background: url('Assets/pharma_banner (1).jpg') no-repeat center center/cover;
     position: relative;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+     
+     
 }
 
   .first-section::before {
@@ -255,10 +267,154 @@ header{
       background: black;
       color: white;
     }
+ .container-1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
+.container-1 h1 {
+  font-size: 2.5rem;
+  color: white;
+  height: 1rem;
+}
 
+.big-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: url("Assets/");
+}
 
+.cotainers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  width: 100%;
+}
 
+.contain {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 2px solid #444;
+}
+
+.contain:hover {
+  transform: scale(1.03);
+}
+
+.contain img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.contain h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.product-btn {
+  background: linear-gradient(90deg, #ff770f 70%, #ff9c45 88%);
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.product-btn:hover {
+  background: linear-gradient(90deg, #ff9c45 70%, #ff770f 88%);
+}
+
+/* Optional: Color difference for left and right */
+.contain.left {
+  border-top-left-radius: 2rem;
+}
+
+.contain.right {
+  border-bottom-right-radius: 2rem;
+}
+
+ 
+/*footer Section Starts Here */
+.footer-divs{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-height: 60vh;
+    height: 100vh;
+    background-color:#2f353a  ;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.footer-divs img{
+    height: 2.5rem;
+}
+.footer-div {
+  flex: 1 1 12.5rem;
+  min-width: 12.5rem;
+  margin-top: 5rem;
+  margin-right: -5rem;
+}
+.footer-logo p{
+     font-style: italic;
+     padding-top: 1rem;
+     font-size: 0.875rem;
+
+} 
+.ft-end{
+    align-items: end;
+    margin-left: 1rem;
+    font-size: 1rem;
+
+}
+.footer-div ul{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.footer-div li{
+    list-style: none;
+    margin: 0.3rem 0;
+}
+.footer-div li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(189, 176, 176);
+}
+.footer-div .icons{
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.2s ease;
+}
+.footer-div .icons:hover{
+    
+    transform: translateY(-0.5rem);
+}
+.get h5{
+    font-weight: 600;
+    padding-top: 1.1rem;
+    font-size: 1.5rem;
+}
+.get p{
+    font-size: 0.925rem;
+    margin-top: 0.5rem;
+    font-weight: lighter;
+}
+.footer-div .connect-us{
+    font-size: 0.8rem;
+}
 /* @media Query Starts From Here  */
 
 @media (max-width:996px){
@@ -418,6 +574,44 @@ header{
   }
    
      
+
+/* .second-section starts here */
+
+ 
+  .cotainers {
+    grid-template-columns: 1fr;
+  }
+
+  .contain {
+    border-radius: 1rem;
+  }
+ 
+/* footer section start here */
+ .footer-divs {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .footer-div {
+    margin-right: 0;
+  }
+
+  .footer-logo p,
+  .footer-div li a,
+  .get p,
+  .footer-div .connect-us {
+    font-size: 1rem;
+  }
+
+  .get h5 {
+    font-size: 1.2rem;
+  }
+
+  .footer-div ul {
+    font-size: 1rem;
+  }
+
 }
 
 * {
