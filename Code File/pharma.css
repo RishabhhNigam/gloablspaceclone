@@ -146,11 +146,9 @@ header{
     align-self: end;
     background: linear-gradient(90deg,rgba(255, 119, 15, 1) 70%, rgba(255, 156, 69, 1) 88%);
     font-size: 0.800rem;
-   
     border-radius: 0.625rem;
     border:0.313rem solid  #ff770f;
      margin-left: 1rem;
-     
     box-shadow: 0.313rem 0.375rem 0.063rem  #ff770f;
 }
 #first-button:hover{

@@ -142,16 +142,22 @@ header{
 
 #first-button{
     height: 2rem;
-    width: 8.375rem;
+    width: 9.375rem;
     align-self: end;
     background: linear-gradient(90deg,rgba(255, 119, 15, 1) 70%, rgba(255, 156, 69, 1) 88%);
     font-size: 0.800rem;
-   
     border-radius: 0.625rem;
     border:0.313rem solid  #ff770f;
-       margin-left: 1rem;
-    
+    margin-left: 1rem;
+    margin-top: 1.5rem ;
     box-shadow: 0.313rem 0.375rem 0.063rem  #ff770f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+#first-button a{
+     white-space: nowrap ;
 }
 #first-button:hover{
      box-shadow:none;
@@ -231,6 +237,7 @@ section {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    color: #000;
  }
  textarea{
     width: 100%;
@@ -239,6 +246,7 @@ section {
     border-radius: 5px;
     font-size: 1rem;
     resize: vertical;
+    color: #000;
  }
 
  button{
