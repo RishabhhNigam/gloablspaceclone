@@ -31,6 +31,7 @@ body {
 }
 a{
     color: #fefefe;
+     text-decoration: none;
 }
 
 header{
@@ -148,8 +149,8 @@ header{
    
     border-radius: 0.625rem;
     border:0.313rem solid  #ff770f;
-    margin-right: 1rem;
-     /* margin-top: 0.625rem; */
+     margin-left: 1rem;
+     
     box-shadow: 0.313rem 0.375rem 0.063rem  #ff770f;
 }
 #first-button:hover{
@@ -559,14 +560,7 @@ header{
   opacity: 1;
   transform: translateX(0);
 }
-/* section {
-     transform: translateX(-50px);
-  transition: all 0.5s ease;
-}
-section:hover ul li{
-    opacity: 1;
-    transform: translateX(0); 
-} */
+ 
 
 .saas-img {
   flex: 1 1 40%;
@@ -742,41 +736,7 @@ section:hover ul li{
         margin-right: 1rem;
          
     }
-    /* .nav{
-        margin-left: 50rem;
-        position: fixed;
-        width: 53%;
-         display: flex;                                                                                         
-    height: 100vh;
-    width: 43vw;
-    background-color: #2f353a;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    /* padding: 2rem 1rem; */
-    /* transform: translateX(100%); Initially hidden off-screen */
-    /* transition: transform 0.3s ease-in-out;
-    z-index: 999;
-    display: flex;
-    left: 0;
-    top: 0.625rem;
-    right: 0;
-     flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 43vw;
-        max-width: 420px;
-        background-color: var(--nav-bg);
-        padding: 2rem 1rem;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 1000;
-}
-   */
+     
      
       .nav {
     position: fixed;
@@ -864,13 +824,38 @@ section:hover ul li{
   }
     
   .first-section{
-      height: 40vh; /* Let it shrink naturally */
+    height: 40vh;  
     padding: 3.75 0.938rem;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
+     
   }
    
+   
+ 
+
+
+
+.content h2{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    text-align: center;
      
+}
+  .para{
+    font-size: 0.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    max-width: 40rem;
+    text-align: center;
+    margin-top: 0rem;
+    
+    
+}  
+
+
 
 /* .second-section starts here */
 
@@ -928,7 +913,12 @@ section:hover ul li{
   .para{
     text-align: center;
     margin: 0 0 ;
+    
   }
+
+   .fourth-section-title .para{
+    font-size: 1rem;
+   }
   .fourth-section-title,
   .fourth-section-img {
     flex: 1 1 100%;
