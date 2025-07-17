@@ -48,8 +48,126 @@
         </nav>
         
     </header>
+    <section class="first-section">
+        
+            <div class="sliding-img">
+                <img class="swipe" src="assets/dark-banner1.webp" alt="">
+                <img class="swipe" src="assets/dark-banner2.webp" alt="">
+                <img class="swipe" src="assets/dark-banner3 (1).webp" alt="">
+
+                <div class="swipe-dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+            </div>
+           
+
+    </section>
     
-    
+    <section class="second-section">
+        <div class="text">
+            <h1>Who Are We?</h1>
+            <p class="para">GlobalSpace Technology being the thought leaders in pharma digital solutions  
+                 plays a deep and meaningful role in powering the future of healthcare.  
+                <br><br>
+                We partner with Global and India’s leading life sciences organizations to help  
+                them navigate the intricacies of a rapidly converging healthcare industry. With   
+                end-to-end offerings across consulting, healthcare solutions, products and  
+                digital marketing solutions we empower organizations to optimize their business  
+                by leveraging technology and keeping pace with changing environments. 
+            </p>
+                <button class="know-more"><a href="">Know more</a></button>
+        </div>
+        <div class="gst-abt">
+            <img src="assets/gst-abt.webp" alt="">
+        </div>
+    </section>
+    <section class=third-section>
+  <div class="pharma-left">
+    <img src="assets/pharma-solution.webp" alt="pharma" />
+  </div>
+  <div class="pharma-right">
+    <h2>Pharma Solutions</h2>
+    <p>We are a group of experts who have a thorough understanding of the pharmaceutical sector, and because of our knowledge of technology, we offer our clients a full range of strategic advice.</p>
+    <p>We support organizations in utilizing our cutting-edge digital product solutions, which enables them to increase productivity with quantifiable business results.</p>
+    <button class="know-more">Know More</button>
+  </div>
+</section>
+
+<section class="fourth-section">
+  <div class="doctor-header">
+    <h2>Doctor Solutions</h2>
+    <p>Our results-driven digital solutions provide a broad range of all-inclusive marketing services to doctors and hospitals</p>
+  </div>
+   <div class="card-container">
+    <div class="card">
+      <img src="assets/Digital-presence.webp" alt="Web Icon" />
+      <span class="card-msg">Improve digital presence</span>
+    </div>
+    <div class="card">
+      <img src="assets/icon2.webp" alt="Visibility Icon" />
+      <span class="card-msg">Improve revenue and profitability of hospitals</span>
+    </div>
+    <div class="card">
+      <img src="assets/icon3.webp" alt="Footfall Icon" />
+      <span class="card-msg">Improve patient<br>footfall</span>
+    </div>
+    <div class="card">
+      <img src="assets/pharma-connect.webp" alt="Network Icon" />
+      <span class="card-msg">Connect with pharma at their convinience</span>
+    </div>
+  </div>
+  
+
+  <div class="hover-message" id="hoverMsg">
+    Hover over an icon to learn more.
+  </div>
+
+  <button class="know-more-btn">Know More</button>
+</section>
+
+ <section class=fifth-section>
+  <div class="pharma-left">
+    <img src="assets/docexa-web.webp" alt="pharma" />
+  </div>
+  <div class="pharma-right">
+    <h2>Patient Solutions</h2>
+    <p>As patients, constant look for accurate information regarding the illness, access to doctors, and a secure location to save medical records . We help you keep all in one secure place.</p>
+    <button class="know-more">Know More</button>
+  </div>
+</section>
+<section class="sixth-section">
+     <div class="hero">
+    <div class="title">
+      One Stop Solution For 
+      <span class="changing-text">
+        <span>Doctor</span>
+        <span>Patient</span>
+        <span>Pharmacy</span>
+      </span>
+    </div>
+      <div class="icons">
+      <div class="icon">👩‍⚕️</div>
+      <div class="icon">📅</div>
+      <div class="icon">💊</div>
+    </div>
+  </div>
+</section>
+<section class="pharmacy-section">
+    <div class="pharmacy-content">
+      <h2>Pharmacy Solutions</h2>
+      <p>
+        We are aware of how critical you are when taking emergency midnight medication. 
+        We support your independence as a neighbourhood pharmacy.
+      </p>
+      <button class="btn">Know More</button>
+    </div>
+    <div class="pharmacy-image">
+      <img src="assets/gst-mediola.webp" alt="Delivery Guy Holding Box" />
+      <!-- Replace the src with your image or host it -->
+    </div>
+  </section>
     <footer> 
         <div class="footer-divs">
         <div class="footer-div ft-end">
@@ -118,8 +236,18 @@
     hamburger.classList.toggle('active');
   }
      hamburger.addEventListener('click', toggleMenu);
-         
-     
+       
+    const slider = document.querySelector(".sliding-img");
+  const slides = document.querySelectorAll(".sliding-img img");
+  let index = 0;
+
+  function showNextSlide() {
+    index++;
+    if (index >= slides.length) index = 0;
+    slider.style.transform = `translateX(-${index * 100}vw)`;
+  }
+
+  setInterval(showNextSlide, 3000); // every 3 seconds
   </script>
 </body>
 </html>
